@@ -9,8 +9,10 @@ const Header = () => {
   // else
   //   setUsername(data.firstname)
 
-  const logOut = () => {
-    setLocalStorage('loggedInUser')
+  const logOutUser = () => {
+
+    localStorage.setItem('loggedInUser', '')
+    window.location.reload()
   }
 
   return (
@@ -22,7 +24,7 @@ const Header = () => {
           username <span className="text-2xl">🐢</span>{" "}
         </span>{" "}
       </h1>
-      <button onClick={} className="bg-red-600 text-lg font-medium text-white px-5 py-2 rounded-sm">
+      <button onClick={logOutUser} className="bg-red-600 text-lg font-medium text-white px-5 py-2 rounded-sm">
         Log Out
       </button>
     </div>

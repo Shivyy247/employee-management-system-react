@@ -1,5 +1,4 @@
 import React from 'react'
-import { setLocalStorage } from '../../utils/localStorage';
 
 const Header = () => {
   // const [username, setUsername] = useState('')

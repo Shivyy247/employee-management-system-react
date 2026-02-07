@@ -11,7 +11,7 @@ const App = () => {
 
   const [user, setUser] = useState(null)
   const [loggedInUserData, setLoggedInUserData] = useState(null)
-  const authData = useContext(AuthContext);
+  const [userData, setUserData] = useContext(AuthContext);
   
   useEffect(() => {
     const loggedInUser = localStorage.getItem('loggedInUser')
@@ -19,7 +19,6 @@ const App = () => {
       const userData = JSON.parse(loggedInUser);
       setUser(userData.role)
       setLoggedInUserData(userData.data)
-      console.log(userData)
     }
  },[])
 
@@ -30,8 +29,8 @@ const App = () => {
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
     }
 
-    else if (authData && authData.employees) {
-      const employee = authData.employees.find(
+    else if (userData) {
+      const employee = userData.find(
         (e) => e.email == email && e.password == password,
       );
       if (employee) {
@@ -50,10 +49,10 @@ const App = () => {
   
 
 
-  useEffect(() => {
-    setLocalStorage()
-    getLocalStorage()
-  },[])
+  // useEffect(() => {
+  //   setLocalStorage()
+  //   getLocalStorage()
+  // },[])
 
   return (
     <>

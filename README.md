@@ -36,7 +36,7 @@ Since this project uses `localStorage` for data persistence, use the following a
 ##  Installation & Setup
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/employee-management-system.git](https://github.com/your-username/employee-management-system.git)
+   git clone [https://github.com/Shivyy247/employee-management-system.git](https://github.com/Shivyy247/employee-management-system.git)
 2. Install dependencies:
    ```bash
    npm install framer-motion lucide-react
